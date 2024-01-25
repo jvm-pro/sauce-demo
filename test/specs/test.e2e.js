@@ -1,7 +1,6 @@
 import { expect } from "@wdio/globals";
 import LoginPage from "../pageobjects/login.page.js";
 import InventoryPage from "../pageobjects/inventory.page.js";
-import inventoryPage from "../pageobjects/inventory.page.js";
 
 describe("My Login application", () => {
   it("should login with valid credentials", async () => {
@@ -15,6 +14,9 @@ describe("My Login application", () => {
 
 describe("Add item to the cart", () => {
   it("Should add the selected item to the cart", async () => {
-    await inventoryPage.open();
+    await InventoryPage.open();
+
+    await expect(InventoryPage.inventory).toHaveText("Sauce Labs Backpack");
+    await InventoryPage.selectItem();
   });
 });

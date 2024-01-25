@@ -13,14 +13,16 @@ class InventoryPage extends Page {
   }
 
   get inventory() {
-    return $("#item_4_title_link");
+    return $(".inventory_item_name ");
   }
 
   get itemBtn() {
     return $("#add-to-cart-sauce-labs-backpack");
   }
 
-  async selectItem() {}
+  async selectItem() {
+    await this.itemBtn.click();
+  }
 
   open() {
     return super.open("inventory.html");

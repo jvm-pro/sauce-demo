@@ -34,7 +34,7 @@ class LoginPage extends Page {
    * overwrite specific options to adapt it to page object
    */
   open() {
-    return super.open("login");
+    return super.open("");
   }
 }
 
