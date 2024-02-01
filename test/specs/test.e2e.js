@@ -21,4 +21,8 @@ describe("Add item to the cart", () => {
     await InventoryPage.selectItem();
     await expect(cartPage.cartPrice).toBeExisting();
   });
+
+  describe("Complete checkout process", () => {
+    it("Should take the user to the checkout process", async () => {});
+  });
 });
