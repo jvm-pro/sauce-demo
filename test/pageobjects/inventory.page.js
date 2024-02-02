@@ -12,6 +12,10 @@ class InventoryPage extends Page {
     return $(".app_logo");
   }
 
+  get header() {
+    return $(".title");
+  }
+
   get inventory() {
     return $(".inventory_item_name ");
   }
